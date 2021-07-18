@@ -16,16 +16,16 @@ export class HomePage {
   }
   
   constructor(public http:HttpClient) {
-    this.readAPI('https://jsonplaceholder.typicode.com/users')
+    this.readAPI('https://www.getpostman.com/collections/befb63e4447819ee3899')
     .subscribe((data) => {
       console.log(data)
       this.movieData.username= data['username'];
         })
-      }
-    });
+      
+    };
   }
 
-  readAPI(URL:string){
+  readAPI(URL:string);{
     return this.http.get(URL);
   }
 
